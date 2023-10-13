@@ -4,89 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review Calcuation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="review-calculation">
         <div class="review-cal-container">
             <div class="review-cal-left">
-                <!-- Progress Card:01 -->
+                <!-- Input Range  Card:01 -->
                 <div class="review-cal-left-card">
                     <div class="review-cal-left-card-top">
-                        <div class="review-cal-left-card-top-icon">
-                            <i class="fa-brands fa-google" style="color: #a0a739;"></i>
-                        </div>
+                        <img src="google.png" class="review-cal-left-card-top-icon" alt="google logo">
                         <div class="review-cal-left-card-top-txt">Current Rating</div>
                     </div>
-                    <div class="review-cal-left-card-progress">
-                        <div class="review-cal-left-card-progress-left">
-                            <div class="review-cal-progress-bar">
-                                <div class="review-cal-progress" id="progress1"></div>
-                            </div>
+                    <div class="review-cal-left-card-range"> 
+                        <div class="review-cal-left-card-range-left">
+                            <input type="range" id="current-rating" min="0.1" max="4.9" step="0.1" value="2.0">
                         </div>
-                        <div class="review-cal-left-card-progress-right">
-                            <span id="progressValue1">0</span>
+                        <div class="review-cal-left-card-range-right">
+                            <output id="current-rating-value">2.0</output>
                         </div>
                     </div>
                 </div>
-                <!-- Progress Card:02 -->
+                <!-- Input Range  Card:02 -->
                 <div class="review-cal-left-card">
                     <div class="review-cal-left-card-top">
-                        <div class="review-cal-left-card-top-icon">
-                            <i class="fa-brands fa-google" style="color: #a0a739;"></i>
-                        </div>
+                        <img src="google.png" class="review-cal-left-card-top-icon" alt="google logo">
                         <div class="review-cal-left-card-top-txt">Current Reviews</div>
                     </div>
-                    <div class="review-cal-left-card-progress">
-                        <div class="review-cal-left-card-progress-left">
-                            <div class="review-cal-progress-bar">
-                                <div class="review-cal-progress" id="progress2"></div>
-                            </div>
+                    <div class="review-cal-left-card-range">
+                        <div class="review-cal-left-card-range-left">
+                            <input type="range" id="current-review" min="1" max="1000" value="500">
                         </div>
-                        <div class="review-cal-left-card-progress-right">
-                            <span id="progressValue2">0</span>
+                        <div class="review-cal-left-card-range-right">
+                            <output id="current-review-value">500</output>
                         </div>
                     </div>
                 </div>
-                <!-- Progress Card:03 -->
+                <!-- Input Range  Card:03 -->
                 <div class="review-cal-left-card">
                     <div class="review-cal-left-card-top">
                         <div class="review-cal-left-card-top-txt">Desired Rating</div>
                     </div>
-                    <div class="review-cal-left-card-progress">
-                        <div class="review-cal-left-card-progress-left">
-                            <div class="review-cal-progress-bar">
-                                <div class="review-cal-progress" id="progress3"></div>
-                            </div>
+                    <div class="review-cal-left-card-range">
+                        <div class="review-cal-left-card-range-left">
+                            <input type="range" id="desired-rating" min="0.1" max="5.0" step="0.1" disabled>
                         </div>
-                        <div class="review-cal-left-card-progress-right">
-                            <span id="progressValue3">0</span>
+                        <div class="review-cal-left-card-range-right">
+                            <output id="desired-rating-value">2.1</output>
                         </div>
                     </div>
                 </div>
 
+                <!-- Toggle Button -->
                 <div class="review-cal-left-toggle">
-                    <div class="review-cal-left-toggle-btn">Btn</div>
+                    <div class="review-cal-toggle-container">
+                        <label class="review-cal-toggle">
+                          <input type="checkbox" id="review-cal-toggle-switch">
+                          <span class="review-cal-slider"></span>
+                        </label>
+                      </div>
                     <div class="review-cal-left-toggle-txt">Impact of low rating</div>
                 </div>
             </div>
+
             <div class="review-cal-right">
-                <div class="review-cal-right-card">
-                    <div class="review-cal-right-card-top">
-                        To acheive <div class="review-cal-right-card-top-value">4.5</div> rating
+                <div class="review-cal-toggle-card-container">
+                    <div class="review-cal-toggle-card review-cal-toggle-card-1 review-cal-toggle-active-card">
+                      <!-- Rating Card -->
+                      <div class="review-cal-right-card">
+                        <div class="review-cal-right-card-top">
+                            To acheive <div class="review-cal-right-card-top-value">4.5</div> rating
+                        </div>
+                        <div class="review-cal-right-card-bottom">
+                            <div class="review-cal-right-card-bottom-txt">You will need</div>
+                            <div class="review-cal-right-card-bottom-value">168</div> 
+                            <div class="review-cal-right-card-bottom-stars">
+                                <span class="review-cal-right-card-bottom-star" data-rating="1">★</span>
+                                <span class="review-cal-right-card-bottom-star" data-rating="2">★</span>
+                                <span class="review-cal-right-card-bottom-star" data-rating="3">★</span>
+                                <span class="review-cal-right-card-bottom-star" data-rating="4">★</span>
+                                <span class="review-cal-right-card-bottom-star" data-rating="5">★</span>
+                            </div> 
+                            <div class="review-cal-right-card-bottom-text">Google Reviews</div>
+                        </div>
                     </div>
-                    <div class="review-cal-right-card-bottom">
-                        <div class="review-cal-right-card-bottom-txt">You will need</div>
-                        <div class="review-cal-right-card-bottom-value">168</div> 
-                        <div class="review-cal-right-card-bottom-stars">
-                            <span class="review-cal-right-card-bottom-star" data-rating="1">★</span>
-                            <span class="review-cal-right-card-bottom-star" data-rating="2">★</span>
-                            <span class="review-cal-right-card-bottom-star" data-rating="3">★</span>
-                            <span class="review-cal-right-card-bottom-star" data-rating="4">★</span>
-                            <span class="review-cal-right-card-bottom-star" data-rating="5">★</span>
-                        </div> 
-                        <div class="review-cal-right-card-bottom-text">Google Reviews</div>
+                    </div>
+                    <!-- Different Pannel -->
+                    <div class="review-cal-toggle-card review-cal-toggle-card-2">
+                        <div class="review-cal-right-card different-pannel">
+                            <h3>Different Pannel</h3>
+                         </div>
                     </div>
                 </div>
             </div>

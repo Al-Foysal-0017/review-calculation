@@ -1,24 +1,55 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const targetValues = [65, 75, 80]; // Set the target values for each progress bar
-    const progressBarElements = [document.getElementById("progress1"), document.getElementById("progress2"), document.getElementById("progress3")];
-    const progressValueElements = [document.getElementById("progressValue1"), document.getElementById("progressValue2"), document.getElementById("progressValue3")];
+// Handle 3 input range fields
+const currentRatingInput = document.getElementById("current-rating");
+const currentRatingValue = document.getElementById("current-rating-value");
+const currentReviewInput = document.getElementById("current-review");
+const currentReviewValue = document.getElementById("current-review-value");
+const desiredRatingInput = document.getElementById("desired-rating");
+const desiredRatingValue = document.getElementById("desired-rating-value");
 
-    const updateProgress = (index) => {
-        let value = 0;
-        const targetValue = targetValues[index];
+// Update the Current Rating value and calculate Desired Rating
+currentRatingInput.addEventListener("input", updateCurrentRating);
+function updateCurrentRating() {
+  const currentRating = parseFloat(currentRatingInput.value);
+  currentRatingValue.textContent = currentRating.toFixed(1);
+  updateDesiredRating(currentRating);
+}
 
-        const interval = setInterval(() => {
-            if (value >= targetValue) {
-                clearInterval(interval);
-            } else {
-                value++;
-                progressBarElements[index].style.width = `${value}%`;
-                progressValueElements[index].innerText = value;
-            }
-        }, 10);
-    };
+// Update the Current Review value
+currentReviewInput.addEventListener("input", updateCurrentReview);
+function updateCurrentReview() {
+  const currentReview = parseInt(currentReviewInput.value);
+  currentReviewValue.textContent = currentReview;
+}
 
-    for (let i = 0; i < targetValues.length; i++) {
-        updateProgress(i);
-    }
+function updateDesiredRating(currentRating) {
+  const desiredRating = currentRating + 0.1;
+  if (desiredRating <= 5.0) {
+    desiredRatingInput.value = desiredRating;
+    desiredRatingValue.textContent = desiredRating.toFixed(1);
+  }
+  else {
+    desiredRatingInput.value = 5.0;
+    desiredRatingValue.textContent = "5.0";
+  }
+}
+
+updateCurrentRating();
+
+
+
+
+
+// Handle Toggle Switch
+const toggleSwitch = document.getElementById("review-cal-toggle-switch");
+const card1 = document.querySelector(".review-cal-toggle-card-1");
+const card2 = document.querySelector(".review-cal-toggle-card-2");
+
+toggleSwitch.addEventListener("change", function () {
+  if (toggleSwitch.checked) {
+    card1.classList.remove("review-cal-toggle-active-card");
+    card2.classList.add("review-cal-toggle-active-card");
+  } else {
+    card1.classList.add("review-cal-toggle-active-card");
+    card2.classList.remove("review-cal-toggle-active-card");
+  }
 });

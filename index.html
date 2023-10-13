@@ -21,7 +21,8 @@
                             <input type="range" id="current-rating" min="0.1" max="4.9" step="0.1" value="2.0">
                         </div>
                         <div class="review-cal-left-card-range-right">
-                            <output id="current-rating-value">2.0</output>
+                            <!-- <output id="current-rating-value">2.0</output> -->
+                            <input value="3.2" type="number" id="input4" min="0.1" max="4.9" step="0.1" />
                         </div>
                     </div>
                 </div>
@@ -36,7 +37,8 @@
                             <input type="range" id="current-review" min="1" max="1000" value="500">
                         </div>
                         <div class="review-cal-left-card-range-right">
-                            <output id="current-review-value">500</output>
+                            <input value="144" type="number" id="input2" min="1" max="1000" step="1" />
+                            <!-- <output id="current-review-value">500</output> -->
                         </div>
                     </div>
                 </div>
@@ -47,10 +49,11 @@
                     </div>
                     <div class="review-cal-left-card-range">
                         <div class="review-cal-left-card-range-left">
-                            <input type="range" id="desired-rating" min="0.1" max="5.0" step="0.1" disabled>
+                            <input type="range" id="desired-rating" min="0.1" max="5.0" step="0.1">
                         </div>
                         <div class="review-cal-left-card-range-right">
-                            <output id="desired-rating-value">2.1</output>
+                            <input value="3.2" type="number" id="input3" min="0.1" max="5.0" step="0.1" />
+                            <!-- <output id="desired-rating-value">2.1</output> -->
                         </div>
                     </div>
                 </div>
@@ -65,12 +68,21 @@
                       </div>
                     <div class="review-cal-left-toggle-txt">Impact of low rating</div>
                 </div>
+                <!-- Toggle Card -->
+                <div class="toggle-card">
+                    <div class="toggle-card-container">
+                        <div class="toggle-card-left">1 <span class="toggle-card-star" data-rating="1">★</span> Rating</div>
+                        <div class="toggle-card-right">
+                            <input value="14" id="input4" min="0" max="100" type="number"/>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="review-cal-right">
                 <div class="review-cal-toggle-card-container">
                     <div class="review-cal-toggle-card review-cal-toggle-card-1 review-cal-toggle-active-card">
-                      <!-- Rating Card -->
+                      <!-- Right Panel-01 -->
                       <div class="review-cal-right-card">
                         <div class="review-cal-right-card-top">
                             To acheive <div class="review-cal-right-card-top-value">4.5</div> rating
@@ -89,11 +101,51 @@
                         </div>
                     </div>
                     </div>
-                    <!-- Different Pannel -->
+                    <!-- Right Panel-02 -->
                     <div class="review-cal-toggle-card review-cal-toggle-card-2">
-                        <div class="review-cal-right-card different-pannel">
-                            <h3>Different Pannel</h3>
-                         </div>
+                        <div class="review-cal-right-card">
+                            <div class="review-cal-right-card-top">
+                                To acheive <div class="review-cal-right-card-top-value">4.5</div> rating
+                            </div>
+                            <!-- Right Panel-02 Top Card-->
+                            <div class="review-cal-right-card-bottom">
+                                <div class="review-cal-right-card-bottom-txt">You will need</div>
+                                <div class="review-cal-right-card-bottom-value">168</div> 
+                                <div class="review-cal-right-card-bottom-stars">
+                                    <span class="review-cal-right-card-bottom-star" data-rating="1">★</span>
+                                    <span class="review-cal-right-card-bottom-star" data-rating="2">★</span>
+                                    <span class="review-cal-right-card-bottom-star" data-rating="3">★</span>
+                                    <span class="review-cal-right-card-bottom-star" data-rating="4">★</span>
+                                    <span class="review-cal-right-card-bottom-star" data-rating="5">★</span>
+                                </div> 
+                                <div class="review-cal-right-card-bottom-text">Google Reviews</div>
+                            </div>
+                            <!-- Right Panel-02 Middle Card-->
+                            <div class="review-cal-right-card-bottom">
+                                <div class="review-cal-right-card-bottom-txt">When you get <span class="review-cal-right-card-bottom-text-value">23</span></div>
+                                <div class="review-cal-right-card-bottom-stars">
+                                    <span class="review-cal-right-card-bottom-star" data-rating="1">★</span>
+                                    <span class="review-cal-right-card-bottom-star color-9CA3AF" data-rating="2">★</span>
+                                    <span class="review-cal-right-card-bottom-star color-9CA3AF" data-rating="3">★</span>
+                                    <span class="review-cal-right-card-bottom-star color-9CA3AF" data-rating="4">★</span>
+                                    <span class="review-cal-right-card-bottom-star color-9CA3AF" data-rating="5">★</span>
+                                </div> 
+                                <div class="review-cal-right-card-bottom-text">Ratings</div>
+                            </div>
+                            <!-- Right Panel-02 Last Card-->
+                            <div class="review-cal-right-card-bottom">
+                                <div class="review-cal-right-card-bottom-txt">You will need</div>
+                                <div class="review-cal-right-card-bottom-value color-FC913C">3901</div> 
+                                <div class="review-cal-right-card-bottom-stars">
+                                    <span class="review-cal-right-card-bottom-star" data-rating="1">★</span>
+                                    <span class="review-cal-right-card-bottom-star" data-rating="2">★</span>
+                                    <span class="review-cal-right-card-bottom-star" data-rating="3">★</span>
+                                    <span class="review-cal-right-card-bottom-star" data-rating="4">★</span>
+                                    <span class="review-cal-right-card-bottom-star" data-rating="5">★</span>
+                                </div> 
+                                <div class="review-cal-right-card-bottom-text">Google Reviews</div>
+                                <div class="review-cal-right-card-bottom-text">which is <span class="review-cal-right-card-bottom-text-value">0</span> higher</div>
+                            </div>
                     </div>
                 </div>
             </div>

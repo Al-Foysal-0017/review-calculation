@@ -73,12 +73,24 @@ body {
     width: 180px;
 }
 
-.review-cal-left-card-range-right{
+/* .review-cal-left-card-range-right{
     background: #fff;
     padding: 4px 32px;
     border: 2px solid #c8cacf;
     border-radius: 6px;
     font-size: 18px;
+} */
+
+.review-cal-left-card-range-right input {
+    width: 80px;
+    outline: none;
+    background: #fff;
+    padding: 4px;
+    padding-left: 16px;
+    border: 2px solid #c8cacf;
+    border-radius: 6px;
+    font-size: 18px;
+    text-align: center;
 }
 
 .review-cal-left-toggle{
@@ -156,6 +168,53 @@ body {
     padding-left: 12px;
 }
 
+.toggle-card {
+    display: none;
+}
+
+.toggle-card-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    background: #F3F4F6;
+    border-radius: 8px;
+    padding: 20px;
+    -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.toggle-card-left{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.toggle-card-star {
+    color: #ffc107;
+    padding: 0 1px;
+    font-size: 16px;
+}
+  
+.toggle-card-right{
+    /* padding-top: 4px; */
+    /* font-size: 16px;
+    color: #ffc107;
+    padding: 0 2px; */
+}
+.toggle-card-right input{
+    width: 80px;
+    outline: none;
+    background: #fff;
+    padding: 4px;
+    padding-left: 16px;
+    border: 2px solid #c8cacf;
+    border-radius: 6px;
+    font-size: 18px;
+    text-align: center;
+}
+  
+
 /* Right Section */
 .review-cal-right{
     border-left: 2px solid #c8cacf;
@@ -173,7 +232,7 @@ body {
 .review-cal-right-card{
     width: 80%;
     max-width: 220px;
-    max-height: 180px;
+    /* max-height: 180px; */
     padding: 24px;
     border-radius: 16px;
     border: 1px solid #eaebee;
@@ -212,7 +271,7 @@ body {
 .review-cal-right-card-bottom-value{
     padding-top: 8px;
     color: #33AE5E;
-    font-size: 40px;
+    font-size: 32px;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -220,7 +279,7 @@ body {
 
 .review-cal-right-card-bottom-stars{
     padding-top: 4px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -229,7 +288,7 @@ body {
 .review-cal-right-card-bottom-star{
     display: inline-block;
     color: #ffc107;
-    padding: 0 1px;
+    padding: 0 2px;
 }
 
 .review-cal-right-card-bottom-text{
@@ -241,12 +300,20 @@ body {
     justify-content: center;
 }
 
-.different-pannel{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: gray;
+.review-cal-right-card-bottom-text-value{
+    color: #FC913C;
+    padding: 0 4px;
+    font-size: 16px;
 }
+
+.color-FC913C{
+    color: #FC913C;
+}
+
+.color-9CA3AF{
+    color: #9CA3AF;
+}
+
 
 
 
@@ -272,6 +339,9 @@ body {
         margin-bottom: 32px;
         justify-content: center;
     }  
+    .toggle-card-container{
+        margin-bottom: 40px;
+    }
     .review-cal-right{
         border-left: none;
         width: 100%;
@@ -317,6 +387,13 @@ body {
     .review-cal-left-card-range-right{
         margin-top: 10px;
     }
+    .toggle-card-right input{
+        padding-left: 8px;
+    }
+    .review-cal-left-card-range-right input {
+        padding-left: 4px;
+    }
+    
 }
 
 @media (max-width: 350px) {

@@ -22,7 +22,7 @@
                         </div>
                         <div class="review-cal-left-card-range-right">
                             <!-- <output id="current-rating-value">2.0</output> -->
-                            <input value="3.2" type="number" id="input4" min="0.1" max="4.9" step="0.1" />
+                            <input value="3" type="number" id="input4" min="0.1" max="4.9" step="0.1" />
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                             <input type="range" id="desired-rating" min="0.1" max="5.0" step="0.1">
                         </div>
                         <div class="review-cal-left-card-range-right">
-                            <input value="3.2" type="number" id="input3" min="0.1" max="5.0" step="0.1" />
+                            <input value="3.1" type="number" id="input3" min="0.1" max="5.0" step="0.1" />
                             <!-- <output id="desired-rating-value">2.1</output> -->
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                     <div class="toggle-card-container">
                         <div class="toggle-card-left">1 <span class="toggle-card-star" data-rating="1">★</span> Rating</div>
                         <div class="toggle-card-right">
-                            <input value="14" id="input4" min="0" max="100" type="number"/>
+                            <input value="14" id="input4" min="0" max="100" type="number" oninput="limitInputToggleCardInputRange(this)"/>
                         </div>
                     </div>
                 </div>

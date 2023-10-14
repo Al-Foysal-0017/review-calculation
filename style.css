@@ -387,6 +387,10 @@ body {
     .review-cal-left-card-range-right{
         margin-top: 10px;
     }
+    
+}
+
+@media (max-width: 480px) {
     .toggle-card-right input{
         padding-left: 8px;
     }

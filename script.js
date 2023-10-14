@@ -56,7 +56,16 @@ currentReviewInputRange.dispatchEvent(new Event("input"));
 
 
 
-// Set The Limit of Current Reviews
+
+// Set The Limit of Current Rating
+function limitInputCurrentRatingInputRange(inputElement) {
+  var currentValue = inputElement.value;
+  if (parseInt(currentValue) > 4.9) {
+      inputElement.value = 4.9;
+  }
+}
+
+// Set The Limit of Toggle Card Input Range
 function limitInputToggleCardInputRange(inputElement) {
   var currentValue = inputElement.value;
   if (parseInt(currentValue) > 100) {
@@ -73,7 +82,7 @@ function limitInputToggleCardInputRange(inputElement) {
 // Get references to the elements
 const currentRatingRange = document.getElementById("current-rating");
 const desiredRatingRange = document.getElementById("desired-rating");
-const currentRatingInput = document.getElementById("input4");
+const currentRatingInput = document.getElementById("input1");
 const desiredRatingInput = document.getElementById("input3");
 
 // Set initial values
@@ -131,3 +140,5 @@ desiredRatingInput.addEventListener("input", function () {
 desiredRatingRange.min = (initialCurrentRating + 0.1).toFixed(1);
 
 updateDesiredRating();
+
+

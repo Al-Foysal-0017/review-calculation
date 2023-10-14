@@ -356,13 +356,11 @@ body {
 
 }
 
-
 @media (max-width: 640px) {
     .review-cal-left-card-range-left input{
         width: 250px;
     }
 }
-
 
 @media (max-width: 500px) {
     .review-cal-left-card-range {

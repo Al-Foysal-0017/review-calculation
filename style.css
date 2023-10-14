@@ -57,29 +57,21 @@ body {
 }
 
 .review-cal-left-card-top-txt{
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: 600;
 }
 
 .review-cal-left-card-range {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 12px;
+    margin-top: 10px;
 }
 
 .review-cal-left-card-range-left input{
     cursor: pointer;
     width: 180px;
 }
-
-/* .review-cal-left-card-range-right{
-    background: #fff;
-    padding: 4px 32px;
-    border: 2px solid #c8cacf;
-    border-radius: 6px;
-    font-size: 18px;
-} */
 
 .review-cal-left-card-range-right input {
     width: 80px;
@@ -89,7 +81,8 @@ body {
     padding-left: 16px;
     border: 2px solid #c8cacf;
     border-radius: 6px;
-    font-size: 18px;
+    font-size: 17px;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -186,22 +179,16 @@ body {
 }
 
 .toggle-card-left{
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: 600;
 }
 
 .toggle-card-star {
     color: #ffc107;
     padding: 0 1px;
-    font-size: 16px;
+    font-size: 17px;
 }
   
-.toggle-card-right{
-    /* padding-top: 4px; */
-    /* font-size: 16px;
-    color: #ffc107;
-    padding: 0 2px; */
-}
 .toggle-card-right input{
     width: 80px;
     outline: none;
@@ -210,7 +197,8 @@ body {
     padding-left: 16px;
     border: 2px solid #c8cacf;
     border-radius: 6px;
-    font-size: 18px;
+    font-size: 17px;
+    font-weight: 600;
     text-align: center;
 }
   

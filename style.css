@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-.review-cal{
+.rvwCaltn {
     padding: 64px 0;
     min-width: 100vw;
     min-height: 100vh;
@@ -15,7 +15,7 @@ body {
     align-items: center;
 }
 
-.review-cal-container{
+.rvwCaltn-container {
     background: #fff;
     max-width: 700px;
     display: flex;
@@ -25,14 +25,13 @@ body {
     border-radius: 16px;
 }
 
-
 /* Left Section */
-.review-cal-left{
+.rvwCaltn-left {
     width: 55%;
     padding-right: 16px;
 }
 
-.review-cal-left-card{
+.rvwCaltn-left-card {
     margin-top: 16px;
     background: #F3F4F6;
     border-radius: 8px;
@@ -42,39 +41,39 @@ body {
     box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
-.review-cal-left-card:first-child {
+.rvwCaltn-left-card:first-child {
     margin-top: 0; 
 }
 
-.review-cal-left-card-top{
+.rvwCaltn-left-card-top {
     display: flex;
     align-items: center;
 }
 
-.review-cal-left-card-top-icon{
+.rvwCaltn-left-card-top-icon {
     margin-right: 4px;
     height: 28px;
     width: 28px;
 }
 
-.review-cal-left-card-top-txt{
+.rvwCaltn-left-card-top-txt {
     font-size: 17px;
     font-weight: 600;
 }
 
-.review-cal-left-card-range {
+.rvwCaltn-left-card-range {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
 }
 
-.review-cal-left-card-range-left input{
+.rvwCaltn-left-card-range-left input {
     cursor: pointer;
     width: 180px;
 }
 
-.review-cal-left-card-range-right input {
+.rvwCaltn-left-card-range-right input {
     width: 80px;
     outline: none;
     background: #fff;
@@ -87,32 +86,32 @@ body {
     text-align: center;
 }
 
-.review-cal-left-toggle{
+.rvwCaltn-left-toggle {
     margin-top: 32px;
     display: flex;
     align-items: center;
 }
 
-.review-cal-toggle-container {
+.rvwCaltn-toggle-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-  
-.review-cal-toggle {
+
+.rvwCaltn-toggle {
     position: relative;
     display: inline-block;
     width: 42px;
     height: 12px;
 }
-  
-.review-cal-toggle input {
+
+.rvwCaltn-toggle input {
     opacity: 0;
     width: 0;
     height: 0;
 }
-  
-.review-cal-slider {
+
+.rvwCaltn-slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -123,8 +122,8 @@ body {
     border-radius: 17px;
     transition: 0.4s;
 }
-  
-.review-cal-slider:before {
+
+.rvwCaltn-slider:before {
     position: absolute;
     content: "";
     height: 20px;
@@ -138,24 +137,24 @@ body {
     -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.75);
     box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.75);
 }
-  
-.review-cal-toggle input:checked + .review-cal-slider {
-    background-color: #0075FF;
+
+.rvwCaltn-toggle input:checked + .rvwCaltn-slider {
+    background-color: #4051B4;
 }
-  
-.review-cal-toggle input:checked + .review-cal-slider:before {
+
+.rvwCaltn-toggle input:checked + .rvwCaltn-slider:before {
     transform: translateX(20px);
 }
-  
-.review-cal-toggle-card {
+
+.rvwCaltn-toggle-card {
     display: none;
 }
-  
-.review-cal-toggle-active-card {
+
+.rvwCaltn-toggle-active-card {
     display: block;
 }
 
-.review-cal-left-toggle-txt{
+.rvwCaltn-left-toggle-txt {
     color: gray;
     font-size: 15px;
     font-weight: 500;
@@ -166,7 +165,7 @@ body {
     display: none;
 }
 
-.toggle-card-container{
+.toggle-card-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -179,7 +178,7 @@ body {
     box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
-.toggle-card-left{
+.toggle-card-left {
     font-size: 17px;
     font-weight: 600;
 }
@@ -189,8 +188,8 @@ body {
     padding: 0 1px;
     font-size: 17px;
 }
-  
-.toggle-card-right input{
+
+.toggle-card-right input {
     width: 80px;
     outline: none;
     background: #fff;
@@ -202,10 +201,9 @@ body {
     font-weight: 600;
     text-align: center;
 }
-  
 
 /* Right Section */
-.review-cal-right{
+.rvwCaltn-right {
     border-left: 2px solid #c8cacf;
     width: 45%;
     display: flex;
@@ -213,12 +211,12 @@ body {
     align-items: center;
 }
 
-.review-cal-toggle-card-container{
+.rvwCaltn-toggle-card-container {
     width: 100%;
     padding-left: 16px;
 }
 
-.review-cal-right-card{
+.rvwCaltn-right-card {
     width: 80%;
     max-width: 220px;
     padding: 24px;
@@ -229,25 +227,25 @@ body {
     box-shadow: 7px 9px 7px 0px rgba(200,202,207,1);
 }
 
-.review-cal-right-card-top{
+.rvwCaltn-right-card-top {
     display: flex;
     color: gray;
     font-weight: 600;
     justify-content: center;
 }
 
-.review-cal-right-card-top-value{  
+.rvwCaltn-right-card-top-value {
     color: #4051B5;
     padding: 0 4px;
     font-size: 16px;
 }
 
-.review-cal-right-card-bottom{
+.rvwCaltn-right-card-bottom {
     margin-top: 16px;
-    border-top: 1px solid #eaebee;;
+    border-top: 1px solid #eaebee;
 }
 
-.review-cal-right-card-bottom-txt{
+.rvwCaltn-right-card-bottom-txt {
     display: flex;
     color: gray;
     padding-top: 16px;
@@ -256,7 +254,7 @@ body {
     justify-content: center;
 }
 
-.review-cal-right-card-bottom-value{
+.rvwCaltn-right-card-bottom-value {
     padding-top: 8px;
     color: #33AE5E;
     font-size: 32px;
@@ -265,7 +263,7 @@ body {
     justify-content: center;
 }
 
-.review-cal-right-card-bottom-stars{
+.rvwCaltn-right-card-bottom-stars {
     padding-top: 4px;
     font-size: 16px;
     cursor: pointer;
@@ -273,13 +271,13 @@ body {
     justify-content: center;
 }
 
-.review-cal-right-card-bottom-star{
+.rvwCaltn-right-card-bottom-star {
     display: inline-block;
     color: #ffc107;
     padding: 0 2px;
 }
 
-.review-cal-right-card-bottom-text{
+.rvwCaltn-right-card-bottom-text {
     display: flex;
     color: gray;
     padding-top: 4px;
@@ -288,59 +286,56 @@ body {
     justify-content: center;
 }
 
-.review-cal-right-card-bottom-text-value{
+.rvwCaltn-right-card-bottom-text-value {
     color: #FC913C;
     padding: 0 4px;
     font-size: 16px;
 }
 
-.color-FC913C{
+.color-FC913C {
     color: #FC913C;
 }
 
-.color-9CA3AF{
+.color-9CA3AF {
     color: #9CA3AF;
 }
 
-
-
 /* Responsive */
 @media (max-width: 800px) {
-    .review-cal{
+    .rvwCaltn {
         min-height: auto;
     }
-    .review-cal-container{
-        /* flex-direction: column-reverse; */
+    .rvwCaltn-container {
         flex-direction: column;
     }
-    .review-cal-left{
+    .rvwCaltn-left {
         width: 100%;
         padding-right: 0;
     }
-    .review-cal-left-card-range-left input{
+    .rvwCaltn-left-card-range-left input {
         width: 250px;
     }
-    .review-cal-left-toggle{
+    .rvwCaltn-left-toggle {
         margin-top: 32px;
         margin-bottom: 32px;
         justify-content: center;
-    }  
-    .toggle-card-container{
+    }
+    .toggle-card-container {
         margin-bottom: 40px;
     }
-    .review-cal-right{
+    .rvwCaltn-right {
         border-left: none;
         width: 100%;
     }
-    .review-cal-toggle-card-container{
+    .rvwCaltn-toggle-card-container {
         width: 100%;
         padding: 0;
         margin: 0;
     }
-    .review-cal-toggle-card{
+    .rvwCaltn-toggle-card {
         width: 100%;
     }
-    .review-cal-right-card{
+    .rvwCaltn-right-card {
         margin: 0;
         width: auto;
         max-width: 100%;
@@ -351,74 +346,74 @@ body {
         -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
         box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
     }
-
 }
 
 @media (max-width: 640px) {
-    .review-cal-left-card-range-left input{
+    .rvwCaltn-left-card-range-left input {
         width: 250px;
     }
 }
 
 @media (max-width: 500px) {
-    .review-cal-left-card-range {
+    .rvwCaltn-left-card-range {
         flex-direction: column;
         align-items: flex-start;
     }
-    .review-cal-left-card-range-left{
+    .rvwCaltn-left-card-range-left {
         margin-top: 8px;
     }
-    .review-cal-left-card-range-right{
+    .rvwCaltn-left-card-range-right {
         margin-top: 10px;
     }
-    
 }
 
 @media (max-width: 480px) {
-    .toggle-card-right input{
+    .toggle-card-right input {
         padding-left: 8px;
     }
-    .review-cal-left-card-range-right input {
+    .rvwCaltn-left-card-range-right input {
         padding-left: 4px;
     }
-    
 }
 
 @media (max-width: 350px) {
-    .review-cal-left-card-range-left input{
+    .rvwCaltn-left-card-range-left input {
         width: 200px;
     }
 }
 
-
-
-
-
+/* Style for the track bar */
 input[type="range"] {
     height: 6px;
-    /* -webkit-appearance: none; */
-    /* appearance: none; */
-    /* background: linear-gradient(to right, #4051B5 0%, #4051B5 0%, #C8CEE7 0%, #C8CEE7 100%); */
-    border-radius: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 6px;
 }
 
 /* Style for the thumb (circle) */
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    /* width: 24px; */
-    /* height: 24px; */
-    /* background: red; */
-    /* border: 1px solid red; */
+    width: 20px;
+    height: 20px;
+    background: #4051B4;
+    border: 1px solid #4051B4;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 
+.range-container {
+    display: flex;
+    align-items: center;
+}
+
+.range-value {
+    margin-left: 10px;
+}
 
 input[type="range"]::-webkit-slider-thumb:hover {
     -webkit-box-shadow: 0px 0px 12px 3px rgba(63,83,181,1);
     -moz-box-shadow: 0px 0px 12px 3px rgba(63,83,181,1);
     box-shadow: 0px 0px 12px 3px rgba(63,83,181,1);
 }
-

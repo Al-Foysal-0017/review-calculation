@@ -3,67 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Calcuation</title>
+    <title>Review Calculation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="review-cal">
-        <div class="review-cal-container">
-            <div class="review-cal-left">
+    <div class="rvwCaltn">
+        <div class="rvwCaltn-container">
+            <div class="rvwCaltn-left">
                 <!-- CURRENT-RATING CARD -->
-                <div class="review-cal-left-card">
-                    <div class="review-cal-left-card-top">
-                        <img src="google.png" class="review-cal-left-card-top-icon" alt="google logo">
-                        <div class="review-cal-left-card-top-txt">Current Rating</div>
+                <div class="rvwCaltn-left-card">
+                    <div class="rvwCaltn-left-card-top">
+                        <img src="google.png" class="rvwCaltn-left-card-top-icon" alt="google logo">
+                        <div class="rvwCaltn-left-card-top-txt">Current Rating</div>
                     </div>
-                    <div class="review-cal-left-card-range"> 
-                        <div class="review-cal-left-card-range-left">
-                            <input value="2" type="range" id="current-rating" min="0.1" max="4.9" step="0.1">
+                    <div class="rvwCaltn-left-card-range"> 
+                        <div class="rvwCaltn-left-card-range-left">
+                            <input type="range" step="0.1" min="0.1" max="4.9" value="2" id="current-rating">
                         </div>
-                        <div class="review-cal-left-card-range-right">
+                        <div class="rvwCaltn-left-card-range-right">
                             <input value="2" type="number" id="input1" min="0.1" max="4.9" step="0.1" oninput="limitInputCurrentRatingInputRange(this)" />
                         </div>
                     </div>
                 </div>
                 <!-- CURRENT-REVIEWS CARD -->
-                <div class="review-cal-left-card">
-                    <div class="review-cal-left-card-top">
-                        <img src="google.png" class="review-cal-left-card-top-icon" alt="google logo">
-                        <div class="review-cal-left-card-top-txt">Current Reviews</div>
+                <div class="rvwCaltn-left-card">
+                    <div class="rvwCaltn-left-card-top">
+                        <img src="google.png" class="rvwCaltn-left-card-top-icon" alt="google logo">
+                        <div class="rvwCaltn-left-card-top-txt">Current Reviews</div>
                     </div>
-                    <div class="review-cal-left-card-range">
-                        <div class="review-cal-left-card-range-left">
-                            <input type="range" id="current-review" min="1" max="1000" value="256">
+                    <div class="rvwCaltn-left-card-range">
+                        <div class="rvwCaltn-left-card-range-left">
+                            <input type="range" min="0" max="1000" value="250" id="current-review">
                         </div>
-                        <div class="review-cal-left-card-range-right">
+                        <div class="rvwCaltn-left-card-range-right">
                             <input value="256" type="number" id="input2" min="1" max="1000" step="1" />
                         </div>
                     </div>
                 </div>
                 <!-- DESIRED-RATING CARD -->
-                <div class="review-cal-left-card">
-                    <div class="review-cal-left-card-top">
-                        <div class="review-cal-left-card-top-txt">Desired Rating</div>
+                <div class="rvwCaltn-left-card">
+                    <div class="rvwCaltn-left-card-top">
+                        <div class="rvwCaltn-left-card-top-txt">Desired Rating</div>
                     </div>
-                    <div class="review-cal-left-card-range">
-                        <div class="review-cal-left-card-range-left">
-                            <input value="2.1" type="range" id="desired-rating" min="2.1" max="5.0" step="0.1">
+                    <div class="rvwCaltn-left-card-range">
+                        <div class="rvwCaltn-left-card-range-left">
+                            <input step="0.1" type="range" min="0.2" max="5" value="2.1" id="desired-rating">
                         </div>
-                        <div class="review-cal-left-card-range-right">
+                        <div class="rvwCaltn-left-card-range-right">
                             <input value="2.1" type="number" id="input3" min="0.2" max="5.0" step="0.1" />
                         </div>
                     </div>
                 </div>
 
                 <!-- TOGGLE BUTTON -->
-                <div class="review-cal-left-toggle">
-                    <div class="review-cal-toggle-container">
-                        <label class="review-cal-toggle">
-                          <input type="checkbox" id="review-cal-toggle-switch">
-                          <span class="review-cal-slider"></span>
+                <div class="rvwCaltn-left-toggle">
+                    <div class="rvwCaltn-toggle-container">
+                        <label class="rvwCaltn-toggle">
+                            <input type="checkbox" id="rvwCaltn-toggle-switch">
+                            <span class="rvwCaltn-slider"></span>
                         </label>
-                      </div>
-                    <div class="review-cal-left-toggle-txt">Impact of low rating</div>
+                    </div>
+                    <div class="rvwCaltn-left-toggle-txt">Impact of low rating</div>
                 </div>
                 <!-- RATING CARD -->
                 <div class="toggle-card">
@@ -76,73 +76,74 @@
                 </div>
             </div>
 
-            <div class="review-cal-right">
-                <div class="review-cal-toggle-card-container">
-                    <div class="review-cal-toggle-card review-cal-toggle-card-1 review-cal-toggle-active-card">
-                      <!-- CALCUATION-RESULT CARD WHEN TOGGLE BUTTON OFF -->
-                      <div class="review-cal-right-card">
-                        <div class="review-cal-right-card-top">
-                            To acheive <div class="review-cal-right-card-top-value">4.5</div> rating
-                        </div>
-                        <div class="review-cal-right-card-bottom">
-                            <div class="review-cal-right-card-bottom-txt">You will need</div>
-                            <div class="review-cal-right-card-bottom-value">168</div> 
-                            <div class="review-cal-right-card-bottom-stars">
-                                <span class="review-cal-right-card-bottom-star" data-rating="1">★</span>
-                                <span class="review-cal-right-card-bottom-star" data-rating="2">★</span>
-                                <span class="review-cal-right-card-bottom-star" data-rating="3">★</span>
-                                <span class="review-cal-right-card-bottom-star" data-rating="4">★</span>
-                                <span class="review-cal-right-card-bottom-star" data-rating="5">★</span>
-                            </div> 
-                            <div class="review-cal-right-card-bottom-text">Google Reviews</div>
+            <div class="rvwCaltn-right">
+                <div class="rvwCaltn-toggle-card-container">
+                    <div class="rvwCaltn-toggle-card rvwCaltn-toggle-card-1 rvwCaltn-toggle-active-card">
+                        <!-- CALCULATION-RESULT CARD WHEN TOGGLE BUTTON OFF -->
+                        <div class="rvwCaltn-right-card">
+                            <div class="rvwCaltn-right-card-top">
+                                To achieve <div class="rvwCaltn-right-card-top-value">4.5</div> rating
+                            </div>
+                            <div class="rvwCaltn-right-card-bottom">
+                                <div class="rvwCaltn-right-card-bottom-txt">You will need</div>
+                                <div class="rvwCaltn-right-card-bottom-value">168</div> 
+                                <div class="rvwCaltn-right-card-bottom-stars">
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="1">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="2">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="3">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="4">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="5">★</span>
+                                </div> 
+                                <div class="rvwCaltn-right-card-bottom-text">Google Reviews</div>
+                            </div>
                         </div>
                     </div>
-                    </div>
-                    <!-- CALCUATION-RESULT CARD WHEN TOGGLE BUTTON ON -->
-                    <div class="review-cal-toggle-card review-cal-toggle-card-2">
-                        <div class="review-cal-right-card">
-                            <div class="review-cal-right-card-top">
-                                To acheive <div class="review-cal-right-card-top-value">4.5</div> rating
+                    <!-- CALCULATION-RESULT CARD WHEN TOGGLE BUTTON ON -->
+                    <div class="rvwCaltn-toggle-card rvwCaltn-toggle-card-2">
+                        <div class="rvwCaltn-right-card">
+                            <div class="rvwCaltn-right-card-top">
+                                To achieve <div class="rvwCaltn-right-card-top-value">4.5</div> rating
                             </div>
                             <!-- TOP PART OF RIGHT-SECTION (WHEN TOGGLE ON) -->
-                            <div class="review-cal-right-card-bottom">
-                                <div class="review-cal-right-card-bottom-txt">You will need</div>
-                                <div class="review-cal-right-card-bottom-value">168</div> 
-                                <div class="review-cal-right-card-bottom-stars">
-                                    <span class="review-cal-right-card-bottom-star" data-rating="1">★</span>
-                                    <span class="review-cal-right-card-bottom-star" data-rating="2">★</span>
-                                    <span class="review-cal-right-card-bottom-star" data-rating="3">★</span>
-                                    <span class="review-cal-right-card-bottom-star" data-rating="4">★</span>
-                                    <span class="review-cal-right-card-bottom-star" data-rating="5">★</span>
+                            <div class="rvwCaltn-right-card-bottom">
+                                <div class="rvwCaltn-right-card-bottom-txt">You will need</div>
+                                <div class="rvwCaltn-right-card-bottom-value">168</div> 
+                                <div class="rvwCaltn-right-card-bottom-stars">
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="1">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="2">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="3">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="4">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="5">★</span>
                                 </div> 
-                                <div class="review-cal-right-card-bottom-text">Google Reviews</div>
+                                <div class="rvwCaltn-right-card-bottom-text">Google Reviews</div>
                             </div>
                             <!-- MIDDLE PART OF RIGHT-SECTION (WHEN TOGGLE ON)-->
-                            <div class="review-cal-right-card-bottom">
-                                <div class="review-cal-right-card-bottom-txt">When you get <span class="review-cal-right-card-bottom-text-value">23</span></div>
-                                <div class="review-cal-right-card-bottom-stars">
-                                    <span class="review-cal-right-card-bottom-star" data-rating="1">★</span>
-                                    <span class="review-cal-right-card-bottom-star color-9CA3AF" data-rating="2">★</span>
-                                    <span class="review-cal-right-card-bottom-star color-9CA3AF" data-rating="3">★</span>
-                                    <span class="review-cal-right-card-bottom-star color-9CA3AF" data-rating="4">★</span>
-                                    <span class="review-cal-right-card-bottom-star color-9CA3AF" data-rating="5">★</span>
+                            <div class="rvwCaltn-right-card-bottom">
+                                <div class="rvwCaltn-right-card-bottom-txt">When you get <span class="rvwCaltn-right-card-bottom-text-value">23</span></div>
+                                <div class="rvwCaltn-right-card-bottom-stars">
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="1">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star color-9CA3AF" data-rating="2">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star color-9CA3AF" data-rating="3">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star color-9CA3AF" data-rating="4">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star color-9CA3AF" data-rating="5">★</span>
                                 </div> 
-                                <div class="review-cal-right-card-bottom-text">Ratings</div>
+                                <div class="rvwCaltn-right-card-bottom-text">Ratings</div>
                             </div>
                             <!-- LAST PART OF RIGHT-SECTION (WHEN TOGGLE ON)-->
-                            <div class="review-cal-right-card-bottom">
-                                <div class="review-cal-right-card-bottom-txt">You will need</div>
-                                <div class="review-cal-right-card-bottom-value color-FC913C">3901</div> 
-                                <div class="review-cal-right-card-bottom-stars">
-                                    <span class="review-cal-right-card-bottom-star" data-rating="1">★</span>
-                                    <span class="review-cal-right-card-bottom-star" data-rating="2">★</span>
-                                    <span class="review-cal-right-card-bottom-star" data-rating="3">★</span>
-                                    <span class="review-cal-right-card-bottom-star" data-rating="4">★</span>
-                                    <span class="review-cal-right-card-bottom-star" data-rating="5">★</span>
+                            <div class="rvwCaltn-right-card-bottom">
+                                <div class="rvwCaltn-right-card-bottom-txt">You will need</div>
+                                <div class="rvwCaltn-right-card-bottom-value color-FC913C">3901</div> 
+                                <div class="rvwCaltn-right-card-bottom-stars">
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="1">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="2">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="3">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="4">★</span>
+                                    <span class="rvwCaltn-right-card-bottom-star" data-rating="5">★</span>
                                 </div> 
-                                <div class="review-cal-right-card-bottom-text">Google Reviews</div>
-                                <div class="review-cal-right-card-bottom-text">which is <span class="review-cal-right-card-bottom-text-value">0</span> higher</div>
+                                <div class="rvwCaltn-right-card-bottom-text">Google Reviews</div>
+                                <div class="rvwCaltn-right-card-bottom-text">which is <span class="rvwCaltn-right-card-bottom-text-value">0</span> higher</div>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>

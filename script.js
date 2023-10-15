@@ -33,7 +33,6 @@ currentReviewInputRange.addEventListener("input", function () {
 currentReviewNumberField.addEventListener("input", function () {
   let value = parseInt(currentReviewNumberField.value);
   
-  // Ensure the value is within the valid range (min and max)
   value = Math.min(1000, Math.max(1, value));
   currentReviewInputRange.value = value;
   currentReviewNumberField.value = value; 
@@ -140,5 +139,3 @@ desiredRatingInput.addEventListener("input", function () {
 desiredRatingRange.min = (initialCurrentRating + 0.1).toFixed(1);
 
 updateDesiredRating();
-
-

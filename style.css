@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-.review-calculation{
+.review-cal{
     padding: 64px 0;
     min-width: 100vw;
     min-height: 100vh;
@@ -24,6 +24,7 @@ body {
     padding: 32px;
     border-radius: 16px;
 }
+
 
 /* Left Section */
 .review-cal-left{
@@ -102,7 +103,7 @@ body {
     position: relative;
     display: inline-block;
     width: 42px;
-    height: 15px;
+    height: 12px;
 }
   
 .review-cal-toggle input {
@@ -126,24 +127,24 @@ body {
 .review-cal-slider:before {
     position: absolute;
     content: "";
-    height: 13px;
-    width: 13px;
-    bottom: 1px;
+    height: 20px;
+    width: 20px;
+    bottom: -4px;
     background-color: #fff;
     border: 1px solid rgb(216, 211, 211);
     border-radius: 50%;
     transition: 0.4s;
-    -webkit-box-shadow: 2px 2px 6px 0px rgba(0,0,0,1);
-    -moz-box-shadow: 2px 2px 6px 0px rgba(0,0,0,1);
-    box-shadow: 2px 2px 6px 0px rgba(0,0,0,1);
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.75);
 }
   
 .review-cal-toggle input:checked + .review-cal-slider {
-    background-color: #005DC8;
+    background-color: #0075FF;
 }
   
 .review-cal-toggle input:checked + .review-cal-slider:before {
-    transform: translateX(26px);
+    transform: translateX(20px);
 }
   
 .review-cal-toggle-card {
@@ -220,7 +221,6 @@ body {
 .review-cal-right-card{
     width: 80%;
     max-width: 220px;
-    /* max-height: 180px; */
     padding: 24px;
     border-radius: 16px;
     border: 1px solid #eaebee;
@@ -304,11 +304,9 @@ body {
 
 
 
-
-
 /* Responsive */
 @media (max-width: 800px) {
-    .review-calculation{
+    .review-cal{
         min-height: auto;
     }
     .review-cal-container{
@@ -391,3 +389,36 @@ body {
         width: 200px;
     }
 }
+
+
+
+
+
+input[type="range"] {
+    height: 6px;
+    /* -webkit-appearance: none; */
+    /* appearance: none; */
+    /* background: linear-gradient(to right, #4051B5 0%, #4051B5 0%, #C8CEE7 0%, #C8CEE7 100%); */
+    border-radius: 5px;
+}
+
+/* Style for the thumb (circle) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    /* width: 24px; */
+    /* height: 24px; */
+    /* background: red; */
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    -webkit-box-shadow: 0px 0px 12px 3px rgba(63,83,181,1);
+    -moz-box-shadow: 0px 0px 12px 3px rgba(63,83,181,1);
+    box-shadow: 0px 0px 12px 3px rgba(63,83,181,1);
+}
+
